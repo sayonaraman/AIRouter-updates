@@ -2,11 +2,11 @@
 
 Signed application releases for AIRouter Linux ARM64 appliances, maintained by SayonaraMan.
 
-Existing AIRouter appliances check the latest stable release hourly, with up to ten minutes of random delay. Checks only report a new version. Installation requires the owner to run `sudo systemctl start 9router-install.service` locally; no release is installed automatically. No GitHub account or token is required on the device. Updates contain the application and AIRouter integration adapters; device accounts, passwords, provider credentials and raw Linux disk images are excluded.
+Devices with the current automatic-update firmware check the latest stable release hourly, with up to ten minutes of random delay, and install verified new versions automatically. No GitHub account or token is required on the device. Updates contain the application and AIRouter integration adapters; device accounts, passwords, provider credentials and raw Linux disk images are excluded.
 
-The manual policy requires the current AIRouter device bootstrap. Application packages do not replace the privileged updater; older installations need a separate bootstrap migration first.
+The automatic policy requires the current AIRouter firmware bootstrap and its root-owned configuration. Application packages do not replace the privileged updater; older manual installations retain their previous policy until separately migrated.
 
-On devices with the dashboard-control bootstrap, availability is checked automatically. Only a newer release shows a sidebar notice with its version and an **Update** button. Clicking it starts installation directly and displays progress on the button. The notice disappears after installation. SSH is only a fallback. The controls and local UI overlay are firmware components and remain outside application releases.
+The dashboard shows a versioned notice while an update is waiting or downloading and removes it after successful installation. It has no manual update/check buttons. Failed startup checks restore the previous application and saved data. The firmware API and local UI overlay remain outside application releases.
 
 ## Authenticity
 
