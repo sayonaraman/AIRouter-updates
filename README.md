@@ -6,7 +6,7 @@ Existing AIRouter appliances check the latest stable release hourly, with up to 
 
 The manual policy requires the current AIRouter device bootstrap. Application packages do not replace the privileged updater; older installations need a separate bootstrap migration first.
 
-On devices with the dashboard-control bootstrap, use **Check for updates** in the sidebar. A newer release enables **Install update**, which asks for confirmation. SSH is only a fallback. The controls and local UI overlay are firmware components and remain outside application releases.
+On devices with the dashboard-control bootstrap, availability is checked automatically. Only a newer release shows a sidebar notice with its version and an **Update** button, which asks for confirmation. The notice disappears after installation. SSH is only a fallback. The controls and local UI overlay are firmware components and remain outside application releases.
 
 ## Authenticity
 
