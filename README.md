@@ -2,7 +2,9 @@
 
 Signed application releases for AIRouter Linux ARM64 appliances, maintained by SayonaraMan.
 
-Existing AIRouter appliances check the latest stable release hourly, with up to ten minutes of random delay. No GitHub account or token is required on the device. Updates contain the application and AIRouter integration adapters; device accounts, passwords, provider credentials and raw Linux disk images are excluded.
+Existing AIRouter appliances check the latest stable release hourly, with up to ten minutes of random delay. Checks only report a new version. Installation requires the owner to run `sudo systemctl start 9router-install.service` locally; no release is installed automatically. No GitHub account or token is required on the device. Updates contain the application and AIRouter integration adapters; device accounts, passwords, provider credentials and raw Linux disk images are excluded.
+
+The manual policy requires the current AIRouter device bootstrap. Application packages do not replace the privileged updater; older installations need a separate bootstrap migration first.
 
 ## Authenticity
 
