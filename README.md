@@ -6,6 +6,8 @@ Existing AIRouter appliances check the latest stable release hourly, with up to 
 
 The manual policy requires the current AIRouter device bootstrap. Application packages do not replace the privileged updater; older installations need a separate bootstrap migration first.
 
+On devices with the dashboard-control bootstrap, use **Check for updates** in the sidebar. A newer release enables **Install update**, which asks for confirmation. SSH is only a fallback. The controls and local UI overlay are firmware components and remain outside application releases.
+
 ## Authenticity
 
 `channel.json` is a signed envelope containing an Ed25519-authenticated manifest. The manifest fixes the version, increasing release sequence, supported platform, HTTPS asset URL, size and SHA256. The appliance verifies it against a pinned public key before downloading and activating the package. `update-public.pub` is provided for independent inspection; trust it through an existing trusted installation or separately verified source, not merely because it accompanies a downloaded package.
